@@ -1,4 +1,4 @@
-package com.company.Java;
+package com.company.Java.Singleton;
 
 /**
  * Singleton Eager Initialization
@@ -16,15 +16,15 @@ package com.company.Java;
  * - using Reflection we can easy broke this pattern creating new instance even with private constructor
  */
 
-public class Singleton_EagerInitialization {
+public class Singleton_01_EagerInitialization {
 
     // TODO: This should be final?
-    private final static Singleton_EagerInitialization instance = new Singleton_EagerInitialization();
+    private final static Singleton_01_EagerInitialization instance = new Singleton_01_EagerInitialization();
 
     /**
      * Possible Reflection fix
      * <p>
-     * private Singleton_EagerInitialization() {
+     * private Singleton_01_EagerInitialization() {
      * System.out.println("Creating...");
      * if ( instance != null) {
      * throw new RuntimeException(can't create instance, Please use getInstance()");
@@ -32,11 +32,11 @@ public class Singleton_EagerInitialization {
      * }
      */
 
-    private Singleton_EagerInitialization() {
+    private Singleton_01_EagerInitialization() {
         System.out.println("Creating...");
     }
 
-    public static Singleton_EagerInitialization getInstance() {
+    public static Singleton_01_EagerInitialization getInstance() {
         return instance;
     }
 }
