@@ -21,17 +21,6 @@ public class Singleton_01_EagerInitialization {
     // TODO: This should be final?
     private final static Singleton_01_EagerInitialization instance = new Singleton_01_EagerInitialization();
 
-    /**
-     * Possible Reflection fix
-     * <p>
-     * private Singleton_01_EagerInitialization() {
-     * System.out.println("Creating...");
-     * if ( instance != null) {
-     * throw new RuntimeException(can't create instance, Please use getInstance()");
-     * }
-     * }
-     */
-
     private Singleton_01_EagerInitialization() {
         System.out.println("Creating...");
     }

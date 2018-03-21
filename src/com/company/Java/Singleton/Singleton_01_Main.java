@@ -3,7 +3,7 @@ package com.company.Java.Singleton;
 
 import java.lang.reflect.Constructor;
 
-public class Singleton_00_Main {
+public class Singleton_01_Main {
 
     public static void main(String[] args) throws Exception {
 
@@ -22,16 +22,5 @@ public class Singleton_00_Main {
 
         // Aaaaaand done :)
         System.out.println("Singleton 3: " + s3.hashCode());
-
-        // Try the same with Singleton Reflection fix
-        Class clazzFix = Class.forName("com.company.Java.Singleton.Singleton_02_EagerInitializationReflectionFix");
-        Constructor<Singleton_01_EagerInitialization> constructorFix = clazzFix.getDeclaredConstructor();
-        constructorFix.setAccessible(true);
-        Singleton_01_EagerInitialization s4 = constructorFix.newInstance();
-
-        System.out.println("Singleton with reflection fix: " + s4.hashCode());
-
-        // TODO: Looks like it works but is it really helpful ?
-
     }
 }
